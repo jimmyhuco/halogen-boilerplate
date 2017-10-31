@@ -1,0 +1,7 @@
+/.*
+!/.gitignore
+/bower_components/
+/node_modules/
+/output/
+/dist/js/app.js
+/package-lock.json
