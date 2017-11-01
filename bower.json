@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "name": "halogen-boilerplate",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output",
+    "dist"
+  ],
+  "dependencies": {
+    "purescript-prelude": "^3.1.0",
+    "purescript-halogen": "^3.0.1",
+    "purescript-routing": "^6.1.2"
+  },
+  "devDependencies": {
+    "purescript-psci-support": "^3.0.0"
+  }
+}

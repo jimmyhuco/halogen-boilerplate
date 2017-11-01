@@ -1,8 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "build": "pulp --psc-package build --to dist/js/app.js",
-    "watch": "pulp --psc-package -w build --to dist/js/app.js",
+    "build": "pulp build --to dist/js/app.js",
+    "watch": "pulp -w build --to dist/js/app.js",
     "watch-fast": "webpack --entry ./entry.js --output-filename dist/js/app.js --progress --watch"
   },
   "devDependencies": {
