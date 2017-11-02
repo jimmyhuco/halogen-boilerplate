@@ -66,6 +66,6 @@ component = H.parentComponent
 
 matchRoutes :: forall eff. H.HalogenIO Query Void (Aff (HA.HalogenEffects eff))
           -> Eff (HA.HalogenEffects eff) Unit
-matchRoutes app = matches RT.routing (redirects app)
+matchRoutes driver = matches RT.routing (redirects driver)
   where
-    redirects app _ = launchAff_ <<< app.query <<< H.action <<< GOTO
+    redirects driver _ = launchAff_ <<< driver.query <<< H.action <<< GOTO
