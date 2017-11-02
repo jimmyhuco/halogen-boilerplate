@@ -15,7 +15,7 @@ This is a boilerplate for starting a real world project using the [purescript-ha
 This guide assumes you already have Git and Node.js installed with `npm` somewhere on your path.
 
 ``` shell
-npm install --global purescript pulp psc-package
+npm install --global purescript pulp psc-package bower
 ```
 
 ## Getting started
@@ -25,7 +25,7 @@ First clone the repo and step into it:
 ``` shell
 git clone https://github.com/jimmyhuco/halogen-boilerplate.git hello-halogen
 cd hello-halogen
-psc-package update
+bower i
 ```
 
 ## Building
