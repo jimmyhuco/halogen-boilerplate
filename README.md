@@ -5,7 +5,8 @@ This is a boilerplate for starting a real world project using the [purescript-ha
 ## Features
 
 * [Bootstrap 4.0.0-beta2](http://getbootstrap.com/) is included.
-* [psc-package](https://github.com/purescript/psc-package) only.
+* Update to latest  [purescript-halogen](https://github.com/slamdata/purescript-halogen) (only bower)
+* [psc-package](https://github.com/purescript/psc-package) is included, but bower is default
 * A rational structure of project with routing.
 * [Webpack](https://github.com/webpack/webpack) is optional.
 
@@ -61,6 +62,6 @@ First, you should have to install [Webpack](https://github.com/webpack/webpack),
 
 ## Note
 
-[purescript-halogen-bootstrap](https://github.com/slamdata/purescript-halogen-bootstrap) don't include bootstrap4, so I just add some "demo code" to use bootstrap4.
-
-Demo images are all from unsplash.com.
+* [purescript-halogen-bootstrap](https://github.com/slamdata/purescript-halogen-bootstrap) don't include bootstrap4, so I just add some "demo code" to use bootstrap4.
+* Demo images are all from unsplash.com.
+* I learned "watch-fast" from [purescript-halogen-template](https://github.com/slamdata/purescript-halogen-template)
