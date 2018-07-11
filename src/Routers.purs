@@ -2,9 +2,7 @@ module Routers where
 
 import Control.Alt ((<$), (<|>))
 import Prelude (class Show, (*>))
-import Routing.Match (Match)
-import Routing.Match.Class (lit)
-
+import Routing.Match (Match, lit)
 
 data Routes = Home | About
 

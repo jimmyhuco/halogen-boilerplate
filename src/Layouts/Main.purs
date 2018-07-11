@@ -5,20 +5,19 @@ import Prelude
 import Bootstrap.Layout as L
 import Components.About as CAbout
 import Components.Home as CHome
-import Control.Monad.Aff (Aff, launchAff_)
-import Control.Monad.Eff (Eff)
 import Data.Either.Nested (Either4)
 import Data.Functor.Coproduct.Nested (Coproduct4)
 import Data.Maybe (Maybe(..))
+import Effect (Effect)
+import Effect.Aff (Aff, launchAff_)
 import Halogen as H
-import Halogen.Aff as HA
 import Halogen.Component.ChildPath (cp1, cp2, cp3, cp4)
 import Halogen.HTML as HH
 import Halogen.HTML.Properties as HP
 import Layouts.Footer as LFooter
 import Layouts.Header as LHeader
 import Routers as RT
-import Routing (matches)
+import Routing.Hash (matches)
 
 data Query a = GOTO RT.Routes a
 
@@ -63,9 +62,8 @@ component = H.parentComponent
       H.put route
       pure next
 
-
-matchRoutes :: forall eff. H.HalogenIO Query Void (Aff (HA.HalogenEffects eff))
-          -> Eff (HA.HalogenEffects eff) Unit
-matchRoutes app = matches RT.routing (redirects app)
+-- void is to discard the effecfull-callback that cancels the subscription
+matchRoutes :: forall eff. H.HalogenIO Query Void Aff -> Effect Unit
+matchRoutes app = void $ matches RT.routing (redirects app)
   where
     redirects driver _ = launchAff_ <<< driver.query <<< H.action <<< GOTO
