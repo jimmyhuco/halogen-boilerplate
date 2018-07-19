@@ -63,7 +63,7 @@ component = H.parentComponent
       pure next
 
 -- void is to discard the effecfull-callback that cancels the subscription
-matchRoutes :: forall eff. H.HalogenIO Query Void Aff -> Effect Unit
+matchRoutes :: H.HalogenIO Query Void Aff -> Effect Unit
 matchRoutes app = void $ matches RT.routing (redirects app)
   where
     redirects driver _ = launchAff_ <<< driver.query <<< H.action <<< GOTO

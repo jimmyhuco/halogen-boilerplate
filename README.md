@@ -4,9 +4,9 @@ This is a boilerplate for starting a real world project using the [purescript-ha
 
 ## Features
 
-* [Bootstrap 4.0.0-beta2](http://getbootstrap.com/) is included.
-* Update to latest  [purescript-halogen](https://github.com/slamdata/purescript-halogen) (only bower)
-* [psc-package](https://github.com/purescript/psc-package) is included, but bower is default
+* [Bootstrap 4.1.2](http://getbootstrap.com/) is included.
+* Update to latest  [purescript-halogen](https://github.com/slamdata/purescript-halogen) (only psc-package)
+* [psc-package](https://github.com/purescript/psc-package) is included and it is default
 * A rational structure of project with routing.
 * [Webpack](https://github.com/webpack/webpack) is optional.
 
@@ -15,7 +15,7 @@ This is a boilerplate for starting a real world project using the [purescript-ha
 This guide assumes you already have Git and Node.js installed with `npm` somewhere on your path.
 
 ``` shell
-npm install --global purescript pulp psc-package bower
+npm install --global purescript pulp psc-package
 ```
 
 ## Getting started
@@ -25,7 +25,7 @@ First clone the repo and step into it:
 ``` shell
 git clone https://github.com/jimmyhuco/halogen-boilerplate.git hello-halogen
 cd hello-halogen
-bower i
+psc-package install
 ```
 
 ## Building
@@ -65,3 +65,4 @@ First, you should have to install [Webpack](https://github.com/webpack/webpack),
 * [purescript-halogen-bootstrap](https://github.com/slamdata/purescript-halogen-bootstrap) don't include bootstrap4, so I just add some "demo code" to use bootstrap4.
 * Demo images are all from unsplash.com.
 * I learned "watch-fast" from [purescript-halogen-template](https://github.com/slamdata/purescript-halogen-template)
+* Thank you @snackycracky. He update purescript from 0.11.6 to 0.12.
